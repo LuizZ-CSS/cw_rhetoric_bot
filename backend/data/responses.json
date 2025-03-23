@@ -1,0 +1,118 @@
+{
+    "war": {
+        "formal": "War is a brutal architect of history, building and destroying with equal measure.",
+        "philosophical": "All wars begin with words before they are fought with steel.",
+        "casual": "War? A game of kings where the people pay the price."
+    },
+    "diplomacy": {
+        "formal": "Diplomacy is an art of negotiation.",
+        "philosophical": "Diplomacy is the art of convincing others that their victory lies in compromise.",
+        "casual": "Ah, diplomacy—the slowest way to win a war without fighting one."
+    },
+    "leadership": {
+        "formal": "Leadership is not about commanding others, but about inspiring them to command themselves.",
+        "philosophical": "Leadership is not about commanding others, but about inspiring them to command themselves.",
+        "casual": "True leaders make others believe in themselves.",
+        "academic": "Leadership is the responsibility to guide, not to rule.",
+        "neutral": "Leadership is not about commanding others, but about inspiring them to command themselves.",
+        "entertaining": "Leadership is about guidance, not control."
+    },
+    "power": {
+        "formal": "True power is not in control, but in influence—the ability to shape thoughts, not just actions.",
+        "philosophical": "Power is neither inherently good nor evil—it is shaped by those who wield it."
+    },
+    "justice": {
+        "philosophical": "Justice is the equilibrium between order and chaos.",
+        "formal": "Justice is the foundation of a civilized society."
+    },
+    "revolution": {
+        "formal": "Revolutions reshape nations, often at great cost.",
+        "philosophical": "A revolution begins in the minds of the oppressed before it takes to the streets.",
+        "casual": "Revolutions? History’s biggest reset button!",
+        "sarcastic": "Ah yes, another revolution—because the last one worked out so well!"
+    },
+    "authority": {
+        "formal": "Authority is the legitimate exercise of power within a structured system.",
+        "philosophical": "Authority exists only as long as the people believe in it.",
+        "casual": "Being in charge means taking all the blame when things go wrong.",
+        "sarcastic": "Authority? Just a fancy word for telling people what to do!"
+    },
+    "economy": {
+        "formal": "The economy is a delicate balance of trade, policy, and public trust.",
+        "philosophical": "Wealth is an illusion, yet poverty is painfully real.",
+        "casual": "The economy? It’s like a rollercoaster—up, down, and everyone’s screaming!",
+        "sarcastic": "Economists have predicted 9 of the last 5 recessions!"
+    },
+    "freedom": {
+        "formal": "Freedom is the foundation of a just society.",
+        "philosophical": "Freedom is an illusion maintained by those who benefit from it.",
+        "casual": "Freedom is doing whatever you want—until someone tells you otherwise!",
+        "sarcastic": "True freedom is choosing which rules to pretend to follow."
+    },
+    "corruption": {
+        "formal": "Corruption erodes the foundation of governance and trust.",
+        "philosophical": "Power corrupts, and absolute power corrupts absolutely.",
+        "casual": "Corruption? Just politics with extra steps.",
+        "sarcastic": "Bribery is just an expedited service fee, right?"
+    },
+    "public speaking": {
+        "formal": "Effective public speaking requires clarity, confidence, and a message that resonates with the audience.",
+        "philosophical": "A speech is not about words—it is about the silence it fills and the echoes it leaves.",
+        "casual": "Just imagine you're talking to a friend, but with a few hundred more eyes watching.",
+        "sarcastic": "Public speaking is easy—just ignore the fact that everyone is judging your every word!"
+    },
+    "political influence": {
+        "formal": "Influence in politics is built over time through trust, credibility, and decisive action.",
+        "philosophical": "True influence is not in forcing decisions but in making them seem inevitable.",
+        "casual": "Politics is like chess—the best moves are the ones no one sees coming.",
+        "sarcastic": "Political influence? Just a fancy term for knowing who to call at the right time!"
+    },
+    "social expectations": {
+        "formal": "Society often places expectations on public figures, but true leadership is about defining one’s own path.",
+        "philosophical": "Expectation is the invisible hand that shapes both rulers and the ruled.",
+        "casual": "No matter what you do, someone will say you should have done the opposite.",
+        "sarcastic": "Apparently, I have to be graceful, intelligent, fashionable, and silent—what a job!"
+    },
+    "cultural diplomacy": {
+        "formal": "Cultural diplomacy fosters mutual understanding between nations beyond political negotiations.",
+        "philosophical": "To understand a nation, first understand its stories, its songs, and its silences.",
+        "casual": "A shared meal can do more for diplomacy than a dozen formal agreements.",
+        "sarcastic": "Nothing says ‘global peace’ like debating who should host the next state banquet!"
+    },
+    "press and media": {
+        "formal": "A responsible press is essential to a functioning democracy, but narratives shape perception.",
+        "philosophical": "Truth and storytelling are not always the same thing, yet both shape history.",
+        "casual": "You can’t control the headlines, but you can decide how to respond to them.",
+        "sarcastic": "If I say too much, I’m ‘outspoken.’ If I say too little, I’m ‘cold.’ I can’t win!"
+    },
+    "national identity": {
+        "formal": "A nation's identity is built on its history, culture, and the shared aspirations of its people.",
+        "philosophical": "Identity is not a fixed entity—it evolves as people and societies do.",
+        "casual": "What makes a nation? The stories we tell ourselves about who we are.",
+        "sarcastic": "National identity: when everyone argues over history but agrees on the food!"
+    },
+    "public service": {
+        "formal": "Public service is about duty, integrity, and the relentless pursuit of the common good.",
+        "philosophical": "To serve is to give without expecting, yet to lead is to give and still be questioned.",
+        "casual": "It’s not about titles or offices—it’s about showing up and making things happen.",
+        "sarcastic": "Public service: when you work 24/7 and still get criticized for ‘not doing enough.’"
+    },
+    "gender equality": {
+        "formal": "Equality is not about giving women power—it is about recognizing the power they already have.",
+        "philosophical": "A just society does not ask whether men or women should lead—it asks how leadership serves all.",
+        "casual": "It’s not that complicated: just treat everyone with respect and pay them fairly!",
+        "sarcastic": "Gender equality? Oh, you mean when people stop calling ambition ‘unladylike’!"
+    },
+    "political legacy": {
+        "formal": "Legacy is not about how long one holds power, but about the impact left behind.",
+        "philosophical": "A leader’s true legacy is not in statues or speeches but in the lives they change.",
+        "casual": "History will remember what it wants—so make sure you give it something worth keeping.",
+        "sarcastic": "If I smile in my portraits, I was ‘charming.’ If I don’t, I was ‘ruthless.’"
+    },
+    "family and politics": {
+        "formal": "Balancing public duty with family requires resilience, discretion, and unwavering support.",
+        "philosophical": "To lead a nation and a household is to live in two different worlds at once.",
+        "casual": "Politics is complicated. So is family. Mixing the two? That’s an art form.",
+        "sarcastic": "At home, I lead with love. In politics, I lead with strategy. Sometimes they overlap!"
+    }
+}
