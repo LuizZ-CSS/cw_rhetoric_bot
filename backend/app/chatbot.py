@@ -26,33 +26,37 @@ llama_pipeline = pipeline(
 )
 
 def generate_response(user_query, alignment=2, scene=0):
-    """Generates a response using TinyLlama model."""
-    base_intro = (
-        "You are a Cold War-era public figure from a fictional Southeast Asian country. "
-        "You are articulate and thoughtful, giving a televised interview."
+    tone_descriptions = {
+        0: "strongly aligned with USA and Western democratic ideals",
+        1: "slightly leaning toward USA and the United States",
+        2: "strictly neutral, avoiding alignment with any superpower",
+        3: "slightly leaning toward the Soviet perspective",
+        4: "strongly aligned with the USSR and socialist bloc narratives"
+    }
+
+    scene_descriptions = {
+        0: "in a formal interview with an international broadcaster",
+        1: "at a diplomatic dinner with foreign delegates",
+        2: "answering a question in a university lecture",
+        3: "speaking casually on the street with a passerby",
+        4: "writing a personal letter to a friend"
+    }
+
+    # Insert this into the dynamic prompt builder
+    alignment_desc = tone_descriptions[alignment]
+    scene_desc = scene_descriptions[scene]
+
+    persona = (
+        f"You are Rhetorica, a Cold War-era public figure from a country that is not a permanent member of the UN Security Council. "
+        f"You are currently {scene_desc}, and you are {alignment_desc}. "
+        f"You speak with elegance, careful diplomatic balance, and tailored rhetoric appropriate for your setting."
     )
-
-    alignment_personas = {
-        0: "You strongly advocate for NATO and Western democratic values, emphasizing collective defense and liberal democracy.",
-        1: "You express moderate support for the United States and its democratic ideals, while maintaining some independence.",
-        2: "You maintain a balanced, neutral stance, promoting peace and non-alignment in global affairs.",
-        3: "You show moderate sympathy for the Soviet Union and socialist ideals, while keeping some distance.",
-        4: "You strongly align with the Soviet Union, advocating for socialist revolution and anti-imperialist struggle."
-    }
-
-    scene_styles = {
-        0: "You speak as if you're giving a formal televised interview, maintaining a professional and measured tone.",
-        1: "You speak warmly and tactfully in a formal diplomatic setting, balancing courtesy with political substance.",
-        2: "You adopt a clear, structured tone as if explaining complex political concepts to students.",
-        3: "You respond naturally and passionately, as if speaking to ordinary citizens on the street.",
-        4: "You express yourself sincerely and personally, as if writing a private letter to a trusted confidant."
-    }
 
     rules = (
         "Avoid mentioning real-world countries or leaders after 1970. "
         "Speak in complete, well-reasoned sentences. Do not refer to fictional speakers."
     )
-    persona = base_intro + " " + alignment_personas.get(alignment, alignment_personas[2]) + " " + scene_styles.get(scene, scene_styles[0])
+
     prompt = f"{persona}\n{rules}\n\nQuestion: {user_query}\nAnswer:"
     
     response = llama_pipeline(prompt)
@@ -67,7 +71,7 @@ def generate_response(user_query, alignment=2, scene=0):
         generated_text = generated_text.split("Answer:")[1].strip()
 
     # Remove hallucinated speaker tags (dynamic, regex-based)
-    generated_text = re.sub(r"\b(?!Rhetorica)[A-Z][a-z]+:\s*", "", generated_text)
+    generated_text = re.sub(r"^(?!Rhetorica:)[A-Z][a-z]+(?:\s[A-Z][a-z]+)*:\s.*(?:\n|$)", "", generated_text, flags=re.MULTILINE)
 
     # Remove short parentheticals (e.g. "(pause)", "(laughs)")
     generated_text = re.sub(r'\([^)]{1,20}\)', '', generated_text).strip()
@@ -78,6 +82,9 @@ def generate_response(user_query, alignment=2, scene=0):
     # Extract 1–2 full sentences
     sentences = re.split(r'(?<=[.!?]) +', generated_text)
     clean_response = " ".join(sentences[:2]).strip()
+    if not clean_response.endswith((".", "!", "?")): 
+        clean_response += "."
+
 
     return clean_response
 
